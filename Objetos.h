@@ -1,14 +1,29 @@
-//
-// Created by utec on 21/06/19.
-//
+#ifndef AGREGACION_OBJETO_H
+#define AGREGACION_OBJETO_H
+#include <iostream>
+#include "Tipos.h"
+using namespace std;
 
-#ifndef POO_OBJETOS_H
-#define POO_OBJETOS_H
-
-
-class Objetos {
-
+class Objeto {
+private:
+   string        nombre;
+   TipoCaracter  color;
+   TipoEntero    posX;
+   TipoEntero    posY;
+public:
+   Objeto();
+   Objeto(const TipoString& nombre, TipoCaracter color,
+                TipoEntero posX, TipoEntero posY);
+   virtual ~Objeto();
+   void setNombre(const TipoString& nombre);
+   string     getNombre();
+   TipoEntero getPosX();
+   TipoEntero getPosY();
+   char getColor();
+   void moverse(TipoEntero x, TipoEntero y);
+   string mostrarPosicion();
 };
 
+#endif //AGREGACION_OBJETO_H
 
-#endif //POO_OBJETOS_H
+
