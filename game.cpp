@@ -1,10 +1,18 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-using namespace std;
+#include "Tierra.h"
+
 int main() {
-cout<<"holaa";
+    Tierra tierrita(400, 600);
+    tierrita.dibujarTierra();
     return 0;
 }
+
+//const map<char, sf::Color> listaColores = {
+//        {'R', sf::Color::Red },
+//        {'G', sf::Color::Green},
+//        {'B', sf::Color::Blue}};
+
 
 
 //int main()
